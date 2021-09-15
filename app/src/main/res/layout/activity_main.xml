@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="주문하실 메뉴를 선택한 뒤[선택완료]클릭해주세요."/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="5"
+        android:layout_margin="3dp">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:hint="*메뉴종류*"/>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_rowSpan="4"
+            android:layout_gravity="fill_vertical"
+            android:src="@drawable/tomato_pasta" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Rgroup">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu1"
+                android:text="해물 파스타(9,500원)"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu2"
+                android:text="토마토 파스타(9,000원)"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu3"
+                android:text="까르보나라(9,500원)"/>
+        </RadioGroup>
+    </GridLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:text="주문완료"
+        android:id="@+id/finish"/>
+
+</LinearLayout>
